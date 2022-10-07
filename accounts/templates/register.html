@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles_accounts.css'%}"> 
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <body>
+        <div class=container>
+            <h>username</h>
+            <input type="text" name="username" maxlength="150" autofocus required id="id_username">
+            <br></br>
+
+            <h>Email</h>
+            <input type="email" name="email" maxlength="254" required="required" id="id_email">
+            <br></br>
+
+            <h>Password</h>
+            <input type="Password"  name="password1" autocomplete="new-password" required="required" id="id_password1" >
+            <br></br>
+
+            <h>Password Confirmation</h>
+            <input type="Password" name="password2" autocomplete="new-password" required="required" id="id_password2" >
+   
+
+            <input class=button type="submit" name="Sign_up" value="Sign up">
+            <input class=button type="button" name="Sign_in" value="Already have an account?"  onclick="location.href='/'">
+            <h>{{form.errors}}</h>
+            <br></br>
+            <br></br>
+        </div>
+
+        
+    </body> 
+
+</form>
+
+{% endblock content %}

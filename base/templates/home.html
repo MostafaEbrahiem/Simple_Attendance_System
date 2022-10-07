@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <body class=container>
+        <input class=button type="button" name="attend" value="Attend" onclick="location.href='/home'" >
+
+        <input class=button type="button" name="Leave" value="Leave" onclick="location.href='/Leave'">
+
+        <input class=button type="button" name="Show" value="Show"  onclick="location.href='/Show'">
+
+
+        {%if status == 2%}
+        <p>Sorry can't record attendence twice</p>
+        {% endif %}
+
+        {%if status == 1%}
+        <p>successfuly recorded</p>
+        {% endif %}
+
+        {%if status == 5%}
+        <p>Can't record Leave befor attend,please record your attend first</p>
+        {% endif %}
+
+        {%if status == 6%}
+        <p>Your record is empty,please attend and leave first</p>
+        {% endif %}
+
+        {%if status == 7%}
+        {%for i in Show_res%}
+        <p>{{i}}</p>
+        {% endfor %}
+
+        {% endif %}
+
+
+    </body>
+
+</form>
+
+{% endblock content %}
+

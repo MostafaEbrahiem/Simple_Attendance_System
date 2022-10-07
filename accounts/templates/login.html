@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles_accounts.css'%}"> 
+{% block content %}
+<title>Login</title>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <body>
+        <div class=container>
+
+            <h>Username</h>
+            <input  type="text" id="Username" name="Username" required="required" >
+            <br></br>
+
+            <h>Password</h>
+            <input  type="Password" id="Password" name="Password" required="required" >
+            <br></br>
+
+            <input class=button type="submit" name="Sign_In" value="Sign In">
+            
+            <input class=button type="button" name="Sign_up" value="Sign up"
+            onclick="location.href='/register'">
+        {% for message in messages%}
+        <h id="messages">{{message}}</h>
+        {% endfor %}
+        </div>
+    </body>
+</form>
+
+{% endblock content %}
