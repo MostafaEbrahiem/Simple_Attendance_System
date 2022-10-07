@@ -1,5 +1,5 @@
 ﻿# Simple_Attendance_System
-Simple attendance system made using django 
+Simple attendance system made using Django 
 
 Database models that used in this project is one for attendance and one leaving.
 
