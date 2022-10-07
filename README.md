@@ -1,8 +1,9 @@
 ﻿# Simple_Attendance_System
 Simple attendance system made using django 
 
-Database models that used in this project is one for attendance and one leaving,
-and to see the user record just sign in as an admin by writing (/admin) after the web address using these credential :User name = mostafa , Password = 12345678 
+Database models that used in this project is one for attendance and one leaving.
+
+And to see the user record just sign in as an admin by writing (/admin) after the web address using these credential :User name = mostafa , Password = 12345678 
 
 ![image](https://user-images.githubusercontent.com/88105870/194645242-23701c3e-7a85-4adc-b2b5-5c6accfd9e23.png)
 
